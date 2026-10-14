@@ -1,0 +1,83 @@
+/* VARIABLES CSS */
+/* El root es el selector padre */
+:root{ 
+    --colorPrimario:#EC111A;
+    --colorSecundario:#082BA5;
+    --colorTerciario:#007BDF;
+    --colorTitulos:#282D31;
+    ---colorParrafos:#53575A;
+    --colorSombras:#282D31;
+    --colorBlanco: #FFFF;
+}
+/* SELECTOR UNIVERSAL  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color: #53575A;
+}
+
+header{
+    background-color: #7d2f38;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 4px var(--colorSombras);
+}
+
+.menu{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__img-logo{
+    height: 60px;    
+}
+
+.menu__btn-menu{
+    display: none;
+}
+
+.menu__enlaces a{
+    font-family: "poppins";
+    padding: 0.6em;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--colorBlanco);
+}
+
+.menu__enlaces a:hover{
+    color: var(--colorPrimario)
+}
+
+@media screen and (max-width: 1023px) {
+    header .menu{
+        flex-direction: column;
+    }
+    header .menu__img-logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+    .menu__btn-menu{
+        display: block;
+        color: var(--colorPrimario);
+        font-size: 1.5em;
+    }
+    .menu__enlaces{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
