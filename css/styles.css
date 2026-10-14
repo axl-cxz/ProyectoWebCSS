@@ -60,10 +60,10 @@ header{
 }
 
 @media screen and (max-width: 1023px) {
-    header .menu{
+    .menu{
         flex-direction: column;
     }
-    header .menu__img-logo{
+    .menu__logo{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
