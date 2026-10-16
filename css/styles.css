@@ -17,7 +17,7 @@
 }
 
 body{
-    background-color: #53575A;
+    background-color: #ffffff;
 }
 
 header{
@@ -81,3 +81,72 @@ header{
         flex-direction: column;
     }
 }
+
+/* Iniico de banner */
+
+.mainbanner{
+    position: relative;
+    padding: 22em 14em;
+    /* background-color: var(--colorSecundario); */
+    background: linear-gradient(to right, purple, red, pink);
+    top: 61px;
+} 
+.mainbanner::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--colorSecundario);
+    mix-blend-mode: multiply;
+    opacity: .2;
+}
+.mainbanner__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .2;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    z-index: 20; 
+    position: relative;
+}
+.centrado{
+    display: block;
+    margin: auto;
+}
+.mainbanner__data{
+    text-align: center;
+}
+.mainbanner__titulo{
+    color: #ffffff;
+    font-family: "poppins";
+    font-weight: 700;
+    font-size: 2.5em;
+
+}
+.mainbanner__parrafo{
+    color: #ffffff;
+    font-family: "poppins";
+    font-size: 1.2em;
+}
+.mainbanner__boton{
+    background-color: var(--colorPrimario);
+    color: #ffffff;
+    padding: 1em;
+    border-radius: 1.5em;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "popping";
+}
+.mainbanner__boton:hover{
+    color: black;
+}
+
+/* Fin de babnne */
