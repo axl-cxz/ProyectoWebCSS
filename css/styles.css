@@ -81,8 +81,8 @@ header{
         flex-direction: column;
     }
 }
-
-/* Iniico de banner */
+    
+/* Inico de banner */
 
 .mainbanner{
     position: relative;
@@ -113,9 +113,15 @@ header{
 }
 .container{
     width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
     margin: auto;
     z-index: 20; 
     position: relative;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 .centrado{
     display: block;
@@ -143,10 +149,53 @@ header{
     border-radius: 1.5em;
     text-decoration: none;
     font-weight: 500;
-    font-family: "popping";
+    font-family: "poppins";
 }
 .mainbanner__boton:hover{
     color: black;
 }
 
-/* Fin de babnne */
+@media screen and (max-width: 860px) {
+    .mainbanner {
+        padding: 8em 6em;
+    }
+     .mainbanner__boton {
+        display: block;
+        margin-bottom: 1em;
+        font-size: 11px;
+    }
+    .mainbanner__data{
+        text-align: center;
+        margin: auto;
+    }
+    .mainbanner__titulo {
+        font-size: 1.8em;
+    }
+    .mainbanner__parrafo {
+        font-size: 1em;
+    }
+
+}
+@media screen and (max-width: 360px) {
+    .mainbanner {
+        padding: 4em 2em;
+    }
+     .mainbanner__boton {
+        display: block;
+        margin-bottom: 1em;
+        font-size: 11px;
+    }
+    .mainbanner__data{
+        text-align: center;
+        margin: auto;
+    }
+    .mainbanner__titulo {
+        font-size: 1.8em;
+    }
+    .mainbanner__parrafo {
+        font-size: 1em;
+    }
+
+}
+
+/* Fin de banner */
