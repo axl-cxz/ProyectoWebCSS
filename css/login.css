@@ -1,0 +1,157 @@
+/* VARIABLES CSS */
+/* El root es el selector padre */
+:root{ 
+    --colorPrimario:#EC111A;
+    --colorSecundario:#082BA5;
+    --colorTerciario:#007BDF;
+    --colorTitulos:#282D31;
+    ---colorParrafos:#53575A;
+    --colorSombras:#282D31;
+    --colorBlanco: #FFFF;
+    --colorBordes: #dfe0e0;
+}
+/* SELECTOR UNIVERSAL  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+    background-image: url(../img/fondo-login.jpg);
+    background-size: cover;
+}
+
+header{
+    background-color: #7d2f38;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 4px var(--colorSombras);
+}
+
+.menu{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__img-logo{
+    height: 60px;    
+}
+
+.menu__btn-menu{
+    display: none;
+}
+
+.menu__enlaces a{
+    font-family: "poppins";
+    padding: 0.6em;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--colorBlanco);
+}
+
+.menu__enlaces a:hover{
+    color: var(--colorPrimario)
+}
+
+@media screen and (max-width: 1023px) {
+    .menu{
+        flex-direction: column;
+    }
+    .menu__logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+    .menu__btn-menu{
+        display: block;
+        color: var(--colorPrimario);
+        font-size: 1.5em;
+    }
+    .menu__enlaces{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Inicio de Formulario */
+
+form{
+    padding: 1em;
+    max-width: 600px;
+    box-shadow: 0 0 6px var(--colorSombras);
+    margin: auto;
+    background-color: #fff;
+}
+
+.formulario__base {
+    border: 3px solid var(--colorPrimario);
+}
+
+.formulario__base img{
+    width: 140px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1em;
+}
+
+.formulario__titulo {
+    font-family: "poppins";
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+input {
+    text-align: left;
+    font-weight: 500;
+    font-family: "poppins";
+    width: 100%;
+    border: 1px solid var(--colorPrimario);
+    padding: 0.6em;
+    
+}
+
+label {
+    font-family: "poppins";
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.formulario__boton {
+    border: 3px solid var(--colorPrimario);
+    padding: 0.4em;
+    text-decoration: none;
+    color:#fff;
+    background-color: var(--colorPrimario);
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.formulario__boton:hover {
+    color: #FFF;
+    background-color: var(--colorSecundario) ;
+}
+
+.formulario__recuperar {
+    color: var(--colorPrimario);
+    display: block;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Fin de Formulario */

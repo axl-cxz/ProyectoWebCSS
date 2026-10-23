@@ -30,6 +30,19 @@ header{
     box-shadow: 0 0 4px var(--colorSombras);
 }
 
+.iconws{
+    position:fixed;
+    z-index: 1001;
+    left: 1em;
+    bottom: 1em;
+    font-size: 2em;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    padding: .5em;
+    box-shadow: 0px 0px 6px #000;
+}
+
 .menu{
     width: 85%;
     margin: auto;
@@ -265,3 +278,33 @@ header{
 }
 
 /* Fin de Cards */
+
+/* INICIO DE FOOTER */
+
+footer{
+    background-color: var(--colorSombras);
+    color: #ffffff;
+    padding: 1.6em 0;
+}
+
+.iconos-pie{
+    font-size: 2.2em;
+}
+
+.iconos-pie:hover{
+    color: var(--colorPrimario);
+}
+
+.pie, .info{
+    font-family: "poppins";
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.derechos{
+    background-color: var(---colorParrafos);
+    color: #dfe0e0;
+    font-family: "poppins";
+    padding: 0.1em 0;
+}
+/* FIN DE FOOTER */
