@@ -1,0 +1,432 @@
+/* =========================================
+Reseteo base y fuentes
+========================================= */
+:root{ 
+    --colorPrimario:#EC111A;
+    --colorSecundario:#082BA5;
+    --colorTerciario:#007BDF;
+    --colorTitulos:#282D31;
+    --colorParrafos:#53575A;
+    --colorSombras:#282D31;
+    --colorBlanco: #FFFF;
+    --colorBordes: #dfe0e0;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+header{
+    background-color: #7d2f38;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 4px var(--colorSombras);
+}
+
+.iconws{
+    position:fixed;
+    z-index: 1001;
+    left: 1em;
+    bottom: 1em;
+    font-size: 2em;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    padding: .5em;
+    box-shadow: 0px 0px 6px #000;
+}
+
+.menu{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__img-logo{
+    height: 60px;    
+}
+
+.menu__btn-menu{
+    display: none;
+}
+
+.menu__enlaces a{
+    font-family: "poppins";
+    padding: 0.6em;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--colorBlanco);
+}
+
+.menu__enlaces a:hover{
+    color: var(--colorPrimario)
+}
+
+@media screen and (max-width: 1023px) {
+    .menu{
+        flex-direction: column;
+    }
+    .menu__logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+    .menu__btn-menu{
+        display: block;
+        color: var(--colorPrimario);
+        font-size: 1.5em;
+    }
+    .menu__enlaces{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+    
+/* Inico de banner */
+
+.mainbanner{
+    position: relative;
+    padding: 14em 14em;
+    /* background-color: var(--colorSecundario); */
+    background: linear-gradient(to right, purple, red, pink);
+    top: 61px;
+} 
+.mainbanner::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--colorSecundario);
+    mix-blend-mode: multiply;
+    opacity: .2;
+}
+.mainbanner__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .2;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    z-index: 20; 
+    position: relative;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.centrado{
+    display: block;
+    margin: auto;
+}
+.mainbanner__data{
+    text-align: center;
+}
+.mainbanner__titulo{
+    color: #ffffff;
+    font-family: "poppins";
+    font-weight: 700;
+    font-size: 2.5em;
+
+}
+.mainbanner__parrafo{
+    color: #ffffff;
+    font-family: "poppins";
+    font-size: 1.2em;
+}
+.mainbanner__boton{
+    background-color: var(--colorPrimario);
+    color: #ffffff;
+    padding: 1em;
+    border-radius: 1.5em;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "poppins";
+}
+.mainbanner__boton:hover{
+    color: black;
+}
+
+@media screen and (max-width: 860px) {
+    .mainbanner {
+        padding: 8em 6em;
+    }
+     .mainbanner__boton {
+        display: block;
+        margin-bottom: 1em;
+        font-size: 11px;
+    }
+    .mainbanner__data{
+        text-align: center;
+        margin: auto;
+    }
+    .mainbanner__titulo {
+        font-size: 1.8em;
+    }
+    .mainbanner__parrafo {
+        font-size: 1em;
+    }
+
+}
+@media screen and (max-width: 360px) {
+    .mainbanner {
+        padding: 4em 2em;
+    }
+     .mainbanner__boton {
+        display: block;
+        margin-bottom: 1em;
+        font-size: 11px;
+    }
+    .mainbanner__data{
+        text-align: center;
+        margin: auto;
+    }
+    .mainbanner__titulo {
+        font-size: 1.8em;
+    }
+    .mainbanner__parrafo {
+        font-size: 1em;
+    }
+
+}
+
+/* Fin de banner */
+body {
+background-color: var(--colorBordes); /* Fondo de la página para que resalte la
+tarjeta */
+min-height: 100vh;
+padding: 0;
+}
+/* =========================================
+Contenedor Principal de la Tarjeta
+========================================= */
+.contact-container {
+display: flex;
+width: 100%;
+max-width: 900px;
+background-color: var(--colorBlanco);
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+overflow: hidden; /* Mantiene los bordes redondeados limpios */
+position: relative;
+align-items: center;
+margin: auto;
+}
+/* =========================================
+Columna Izquierda: Información
+========================================= */
+.contact-info {
+width: 45%;
+padding: 50px 40px;
+position: relative;
+overflow: hidden;
+background-color: var(--colorBlanco);
+}
+.info-title {color: var(--colorPrimario);
+font-size: 22px;
+margin-bottom: 40px;
+}
+.info-list {
+list-style: none;
+margin-bottom: 50px;
+}
+.info-list li {
+display: flex;
+align-items: center;
+margin-bottom: 25px;
+color: var(--colorParrafos);
+font-size: 15px;
+}
+.info-list i {
+color: var(--colorPrimario);
+font-size: 24px;
+margin-right: 20px;
+width: 25px;
+text-align: center;
+}
+.social-section p {
+color: var(--colorParrafos);
+margin-bottom: 15px;
+font-size: 14px;
+}
+.social-icons {
+display: flex;
+gap: 10px;
+}
+.social-icons a {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 35px;
+height: 35px;
+background-color: var(--colorPrimario);
+color: var(--colorBlanco);
+text-decoration: none;
+border-radius: 8px;
+transition: background-color 0.3s ease;
+}.social-icons a:hover {
+background-color: var(--colorSecundario);
+}
+/* Círculo decorativo inferior izquierdo */
+.circle-decoration {
+position: absolute;
+bottom: -40px;
+left: 40%;
+width: 120px;
+height: 120px;
+border: 15px solid #d4f1eb;
+border-radius: 50%;
+}
+/* =========================================
+Columna Derecha: Formulario
+========================================= */
+.contact-form {
+width: 55%;
+padding: 50px 40px;
+background-color: var(--colorPrimario);
+position: relative;
+overflow: hidden;
+color: var(--colorBlanco);
+}
+/* Decoraciones de fondo circulares (simulando la imagen) */
+.contact-form::before,
+.contact-form::after {
+content: '';
+position: absolute;
+border-radius: 50%;
+background: rgba(0, 0, 0, 0.05);
+}
+.contact-form::before {
+width: 200px;
+height: 200px;
+top: -50px;
+right: -50px;
+}
+.contact-form::after {
+width: 100px;
+height: 100px;
+bottom: 20px;
+left: -20px;}
+.form-title {
+font-size: 22px;
+margin-bottom: 30px;
+position: relative;
+z-index: 1;
+}
+form {
+position: relative;
+z-index: 1;
+display: flex;
+flex-direction: column;
+}
+/* Estilo de los campos usando Fieldset para romper la línea del borde */
+.input-group {
+border: 1px solid var(--colorBlanco);
+border-radius: 25px;
+padding: 0 20px 5px 20px;
+margin-bottom: 20px;
+}
+.input-group legend {
+font-size: 14px;
+padding: 0 10px;
+margin-left: 10px;
+color: var(--colorBlanco);
+}
+.input-group input,
+.input-group textarea {
+width: 100%;
+border: none;
+background: transparent;
+outline: none;
+color: var(--colorBlanco);
+font-size: 15px;
+}
+/* Ajuste específico para el área del mensaje */
+.textarea-group {
+border-radius: 20px;
+padding-bottom: 10px;
+}
+.textarea-group textarea {
+resize: none;height: 90px;
+}
+/* Botón Enviar */
+.btn-send {
+background-color: var(--colorBlanco);
+color: var(--colorPrimario);
+border: none;
+border-radius: 25px;
+padding: 10px 35px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+align-self: flex-start; /* Alinea a la izquierda */
+margin-top: 5px;
+transition: all 0.3s ease;
+}
+.btn-send:hover {
+background-color: #f1f1f1;
+transform: translateY(-2px);
+}
+/* =========================================
+Diseño Responsivo (Móviles y Tablets)
+========================================= */
+@media (max-width: 768px) {
+.contact-container {
+flex-direction: column;
+}
+.contact-info,
+.contact-form {
+width: 100%;
+}
+.circle-decoration {
+display: none; /* Ocultar decoración en móvil para ahorrar
+espacio */
+}
+}
+
+/* INICIO DE FOOTER */
+
+footer{
+    background-color: var(--colorSombras);
+    color: #ffffff;
+    padding: 1.6em 0;
+}
+
+.iconos-pie{
+    font-size: 2.2em;
+}
+
+.iconos-pie:hover{
+    color: var(--colorPrimario);
+}
+
+.pie, .info{
+    font-family: "poppins";
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.derechos{
+    background-color: var(--colorParrafos);
+    color: #dfe0e0;
+    font-family: "poppins";
+    padding: 0.1em 0;
+}
+/* FIN DE FOOTER */
